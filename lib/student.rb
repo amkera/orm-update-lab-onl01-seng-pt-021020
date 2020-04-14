@@ -23,7 +23,10 @@ class Student
   
   def save
     #inserts new row into database using the attributes of the given object
-    
+    sql = <<-SQL
+      INSERT INTO students (name, grade)
+      VALUES (?, ?)
+    SQL
     
   
   def self.drop_table

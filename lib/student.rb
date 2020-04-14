@@ -24,8 +24,14 @@ class Student
     DB[:conn].execute(sql)
   end 
   
+  def self.drop_table
+    sql = <<-SQL
+      DROP TABLE students
+    SQL
+    DB[:conn].execute(sql)
+  end 
   
-  
+
   
   def save
     #inserts new row into database using the attributes of the given object
@@ -43,7 +49,6 @@ class Student
   end 
   
   
-  
   def update
     sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?"
     DB[:conn].execute(sql, self.name, self.grade, self.id)
@@ -56,12 +61,7 @@ class Student
   end
     
   
-  def self.drop_table
-    sql = <<-SQL
-      DROP TABLE students
-    SQL
-    DB[:conn].execute(sql)
-  end 
+  
     
 
 end

@@ -51,9 +51,11 @@ class Student
   
   
   
-  def self.create 
-    sql = <<-SQL
-      
+  def self.create(name:, album:)
+    student = Student.new(name, album)
+    student.save
+    student
+  end  
     
   
   def self.drop_table

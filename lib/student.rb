@@ -21,6 +21,11 @@ class Student
     DB[:conn].execute(sql)
   end 
   
+  def save
+    #inserts new row into database using the attributes of the given object
+    
+    
+  
   def self.drop_table
     sql = <<-SQL
       DROP TABLE students

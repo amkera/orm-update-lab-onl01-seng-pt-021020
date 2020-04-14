@@ -17,7 +17,7 @@ class Student
         name TEXT,
         age INTEGER
         )
-    SQL
+        SQL
     
 
 end

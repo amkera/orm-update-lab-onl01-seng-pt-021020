@@ -18,6 +18,8 @@ class Student
         age INTEGER
         )
         SQL
+    DB[:conn].execute(sql)
+  end 
     
 
 end

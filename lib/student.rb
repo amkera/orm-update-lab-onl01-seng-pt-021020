@@ -9,5 +9,10 @@ class Student
     @name = name
     @age = age
   end
+  
+  def self.create_table
+    CREATE TABLE students (
+      id INTEGER PRIMARY KEY,
+      )
 
 end
